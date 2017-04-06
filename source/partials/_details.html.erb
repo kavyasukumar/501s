@@ -1,0 +1,17 @@
+<section id="details" class="row">
+    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+        <% data.details.keys.each do |topic| %>
+        <li class="detail text-center" data-reveal-id='<%="#{topic.parameterize}-modal"%>' >
+            <p style="background-image:url('<%= data.details[topic].img %>')"><%= topic %></p>
+        </li>
+        <%end %>
+    </ul>
+
+    <% data.details.keys.each do |topic| %>
+      <div id='<%="#{topic.parameterize}-modal"%>' class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+        <h2><%= topic %> </h2>
+        <%= partial "partials/#{topic.parameterize}" %>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+      </div>
+    <%end %>
+</section>

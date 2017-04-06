@@ -1,0 +1,78 @@
+@import "foundation";
+@import "foundation/components/grid";
+@import "foundation/components/block-grid";
+@import "foundation/components/reveal";
+
+$white: #FFFFFF;
+$grey: #555;
+$dark-grey:#111;
+$tan-orange:#ED9F67;
+$dark-orange: #FF4444;
+
+body{
+  background-color: $white;
+}
+
+#hero{
+  width: 100%;
+  min-height: 400px;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  h1,h2{
+    margin: auto;
+  }
+  h1{
+    font-size: 8rem;
+    color: $dark-orange;
+    span.highlight{
+      color: $white;
+      background-color: $dark-grey;
+      padding: 0 10px 0 8px;
+    }
+  }
+  h2{
+    color: $grey;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: $grey;
+    border-top: 1px solid $grey;
+    padding-top: 20px;
+    margin-top: 20px;
+    letter-spacing: 25px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+#details{
+  .detail{
+    p{
+      min-height: 200px;
+      padding: 20px;
+      border: 1px solid $tan-orange;
+      line-height: 200px;
+      vertical-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.reveal-modal {
+  h2{
+    border-bottom: 1px solid $tan-orange;
+    margin-bottom: 1.5rem;
+  }
+  img{
+    margin: auto;
+    display: block;
+  }
+  .close-reveal-modal{
+    color: $tan-orange;
+  }
+  h4{
+    margin-top: 2rem;
+  }
+}
