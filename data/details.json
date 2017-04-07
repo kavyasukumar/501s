@@ -1,8 +1,9 @@
 {
-    "Basics": {
+    "main":{
+      "Basics": {
       "img":"http://placehold.it/500x500"
     },
-    "Getting here": {
+    "Directions": {
       "img":"http://placehold.it/500x500"
     },
     "Check-in": {
@@ -11,6 +12,11 @@
     "Parking": {
       "img":"http://placehold.it/500x500"
     },
+    "Check-out": {
+      "img":"http://placehold.it/500x500"
+    }
+  },
+    "extra":{
     "Kitchen": {
       "img":"http://placehold.it/500x500"
     },
@@ -20,10 +26,8 @@
     "Finding things": {
       "img":"http://placehold.it/500x500"
     },
-    "Check-out": {
-      "img":"http://placehold.it/500x500"
-    },
     "Coffee": {
       "img":"http://placehold.it/500x500"
     }
+  }
 }

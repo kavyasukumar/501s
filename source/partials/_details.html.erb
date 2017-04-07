@@ -1,16 +1,25 @@
 <section id="details" class="row">
-    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3">
-        <% data.details.keys.each do |topic| %>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
+        <% data.details.main.keys.each do |topic| %>
         <li class="detail text-center" data-reveal-id='<%="#{topic.parameterize}-modal"%>' >
-            <p style="background-image:url('<%= data.details[topic].img %>')"><%= topic %></p>
+            <p style="background-image:url('<%= data.details.main[topic].img %>')"><%= topic %></p>
         </li>
         <%end %>
     </ul>
 
-    <% data.details.keys.each do |topic| %>
+    <h3>Finding things</h3>
+    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+        <% data.details.extra.keys.each do |topic| %>
+        <li class="detail text-center" data-reveal-id='<%="#{topic.parameterize}-modal"%>' >
+            <p style="background-image:url('<%= data.details.extra[topic].img %>')"><%= topic %></p>
+        </li>
+        <%end %>
+    </ul>
+
+    <% (data.details.main.keys + data.details.extra.keys).each do |topic| %>
       <div id='<%="#{topic.parameterize}-modal"%>' class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
         <h2><%= topic %> </h2>
-        <%= partial "partials/#{topic.parameterize}" %>
+        <%= partial "partials/content/#{topic.parameterize}" %>
         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
       </div>
     <%end %>
